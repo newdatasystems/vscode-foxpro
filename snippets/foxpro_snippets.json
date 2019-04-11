@@ -1,0 +1,150 @@
+{
+	"local select": {
+		"prefix": "lnsel",
+		"body": [
+			"LOCAL lnOldSel",
+			"lnOldSel = SELECT()",
+			"$0",
+			"SELECT (lnOldSel)"
+		],
+		"description": "basic set up for selecting the current area into a variable and then restoring to that area"
+	},
+
+	"case statement": {
+		"prefix": "docase",
+		"body": [
+			"DO CASE",
+			"\tCASE ${1:condition}",
+			"\t\t",
+			"\tCASE ${2:condition}",
+			"\t\t",
+			"\tOTHER",
+			"\t\t",
+			"ENDCASE"
+		],
+		"description": "basic set up for selecting the current area into a variable and then restoring to that area"
+	},
+
+	"Procedure": {
+		"prefix": "prc",
+		"body": [
+			"PROCEDURE ${1:ProcedureName} ($2)",
+			"\t$0",
+			"ENDPROC"
+		],
+		"description": "Simple foxpro procedure call"
+	},
+
+	"fSelectStatement": {
+		"prefix": "fs",
+		"body": [
+			"WITH fSelectStatement('${1:file}')",
+			"\t$0",
+			"ENDWITH"
+		],
+		"description": "Simple fSelectStatment"
+	},
+
+	"fSelectStatement.IntoObject": {
+		"prefix": "fso",
+		"body": [
+			"WITH fSelectStatement('${1:file}')",
+			"\t$0",
+			"\t${2:loData} = .IntObject()",
+			"ENDWITH"
+		],
+		"description": "Simple fSelectStatment with an output IntoObject"
+	},
+
+	"fSelectStatement.IntoValue": {
+		"prefix": "fsv",
+		"body": [
+			"WITH fSelectStatement('${1:file}')",
+			"\t.Fields('${2:field}')",
+			"\t$0",
+			"\t${3:lcValue} = .IntoValue()",
+			"ENDWITH"
+		],
+		"description": "Simple fSelectStatment with an output IntoObject"
+	},
+
+	"fUpdateStatement": {
+		"prefix": "fup",
+		"body": [
+			"WITH fUpdateStatement('${1:file}')",
+			"\t.Set('${2:field}',${3:value})",
+			"\t.Where('${4:field}',${5:value})",
+			"\t$0",
+			"\t.Execute()",
+			"ENDWITH"
+		],
+		"description": "Simple fUpdateStatement"
+	},
+
+	"fInsertStatement": {
+		"prefix": "fin",
+		"body": [
+			"WITH fInsertStatement('${1:file}')",
+			"\t.Set('${2:field}',${3:value})",
+			"\t$0",
+			"\t.Execute()",
+			"ENDWITH"
+		],
+		"description": "Simple fUpdateStatement"
+	},
+
+	"fDeleteStatement": {
+		"prefix": "fdel",
+		"body": [
+			"WITH fDeleteStatement('${1:file}')",
+			"\t.Where('${2:field}',${3:value})",
+			"\t.Execute()",
+			"ENDWITH"
+		],
+		"description": "Simple fUpdateStatement"
+	},
+
+	"Define Class": {
+		"prefix": "dc",
+		"body": [
+			"DEFINE CLASS ${1:ClassName} AS ${2:ParentClass}",
+			"$2",
+			"\tPROCEDURE ${4:Init} ()",
+			"\t\t$0",
+			"\tENDPROC",
+			"ENDDEFINE"
+		],
+		"description": "Define class with no external file reference"
+	},
+
+	"Define Class Of": {
+		"prefix": "dco",
+		"body": [
+			"DEFINE CLASS ${1:ClassName} AS ${2:ParentClass} OF ${2}.fxp",
+			"",
+			"\tPROCEDURE ${3:Init} ()",
+			"\t\t$0",
+			"\tENDPROC",
+			"ENDDEFINE"
+		],
+		"description": "Define class with external file reference"
+	},
+
+	"Instantiable Class Object File": {
+		"prefix": "dcf",
+		"body": [
+			"PROCEDURE ${TM_FILENAME_BASE} (${3:tcParam})",
+			"\tRETURN CREATEOBJECT('${1}',${3})",
+			"ENDPROC",
+			"",
+			"DEFINE CLASS ${1:${TM_FILENAME_BASE}} AS ${2:ParentClass} OF ${2}.fxp",
+			"\t$4",
+			"\tPROCEDURE Init (${3})",
+			"\t\t$0",
+			"\tENDPROC",
+			"ENDDEFINE"
+		],
+		"description":"Define class with functional call to instantiate"
+	}
+	
+}
