@@ -17,7 +17,5 @@ Changelog
 1.0.1: Initial branch from original version
 
 ### For more information
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
 
-** Enjoy!**
+The "master" branch contains snippets that reference internal development tools that you most likely aren't interested in. If that's the case, please feel free to clone the "vanilla" branch which should be free of any company-specific references.
