@@ -1,4 +1,68 @@
 {
+	"try catch block": {
+		"prefix": "tryc",
+		"body": [
+			"TRY",
+			"\t$0",
+			"CATCH TO ${1:loException}",
+			"\t",
+			"ENDTRY"
+		],
+		"description": "try catch block into an object"
+	},
+
+	"try catch finally block": {
+		"prefix": "tryf",
+		"body": [
+			"TRY",
+			"\t$0",
+			"CATCH TO ${1:loException}",
+			"\t",
+			"FINALLY",
+			"\t",
+			"ENDTRY"
+		],
+		"description": "try catch finally block into an object"
+	},
+
+	"if else endif": {
+		"prefix": "ifel",
+		"body": [
+			"IF ${1:condition}",
+			"\t$0",
+			"ELSE",
+			"\t",
+			"ENDIF"
+		],
+		"description": "simple if else endif block"
+	},
+
+	"if endif": {
+		"prefix": "ifend",
+		"body": [
+			"IF ${1:condition}",
+			"\t$0",
+			"ENDIF"
+		],
+		"description": "simple if endif block"
+	},
+
+	"iif statement": {
+		"prefix": "iifs",
+		"body": [
+			"IIF(${1:condition},${2:if-true},${3:if-false})"
+		],
+		"description": "iif statement"
+	},
+
+	"icase statement": {
+		"prefix": "ics",
+		"body": [
+			"ICASE(${1:condition1},${2:if-true},${3:condition2},${4:if-true},${5:otherwise})"
+		],
+		"description": "icase statement"
+	},
+
 	"local select": {
 		"prefix": "lnsel",
 		"body": [
@@ -41,7 +105,7 @@
 	"fSelectStatement": {
 		"prefix": "fs",
 		"body": [
-			"WITH fSelectStatement('${1:file}')",
+			"WITH fSelectStatement('${1:File}')",
 			"\t$0",
 			"ENDWITH"
 		],
@@ -52,7 +116,7 @@
 	"fSelectStatement.IntoObject": {
 		"prefix": "fso",
 		"body": [
-			"WITH fSelectStatement('${1:file}')",
+			"WITH fSelectStatement('${1:File}')",
 			"\t$0",
 			"\t${2:loData} = .IntObject()",
 			"ENDWITH"
@@ -64,8 +128,8 @@
 	"fSelectStatement.IntoValue": {
 		"prefix": "fsv",
 		"body": [
-			"WITH fSelectStatement('${1:file}')",
-			"\t.Fields('${2:field}')",
+			"WITH fSelectStatement('${1:File}')",
+			"\t.Fields('${2:Field}')",
 			"\t$0",
 			"\t${3:lcValue} = .IntoValue()",
 			"ENDWITH"
@@ -77,9 +141,9 @@
 	"fUpdateStatement": {
 		"prefix": "fup",
 		"body": [
-			"WITH fUpdateStatement('${1:file}')",
-			"\t.Set('${2:field}',${3:value})",
-			"\t.Where('${4:field}',${5:value})",
+			"WITH fUpdateStatement('${1:File}')",
+			"\t.Set('${2:Field1}',${3:lcValue1})",
+			"\t.Where('${4:Field2}',${5:lcValue2})",
 			"\t$0",
 			"\t.Execute()",
 			"ENDWITH"
@@ -92,7 +156,7 @@
 		"prefix": "fin",
 		"body": [
 			"WITH fInsertStatement('${1:file}')",
-			"\t.Set('${2:field}',${3:value})",
+			"\t.Set('${2:field}',${3:lcValue})",
 			"\t$0",
 			"\t.Execute()",
 			"ENDWITH"
@@ -105,7 +169,7 @@
 		"prefix": "fdel",
 		"body": [
 			"WITH fDeleteStatement('${1:file}')",
-			"\t.Where('${2:field}',${3:value})",
+			"\t.Where('${2:field}',${3:lcValue})",
 			"\t.Execute()",
 			"ENDWITH"
 		],
@@ -230,9 +294,131 @@
     },
 
     "Multiprompt Note Field": {
-    "prefix": "mpnote",
-    //    TextMemoNote ~C Note ~@C m.pcNote ~T Memo
-    "body": "${1:MemoName} ~T EDIT ~C ${2:Caption} ~@C <<${3:pcNote}>>",
-    "description": "Generic memo field definition for multiprompt"
-},
+		"prefix": "mpnote",
+		//    TextMemoNote ~C Note ~@C m.pcNote ~T Memo
+		"body": "${1:MemoName} ~T EDIT ~C ${2:Caption} ~@C <<${3:pcNote}>>",
+		"description": "Generic memo field definition for multiprompt"
+	},
+
+	// dao helpers
+	// [internal]
+    "DataAccessObject.Open": {
+		"prefix": "open",
+		"body": [
+			"WITH this.Open('${1:File}')",
+			"\t$0",
+			"ENDWITH"
+		],
+		"description": "Generic Open statement for a DataAccessObject instance"
+	},
+
+    "this.Dao.Open": {
+		"prefix": "dopen",
+		"body": [
+			"WITH this.${1:Dao}.Open('${2:File}')",
+			"\t$0",
+			"ENDWITH"
+		],
+		"description": "Generic Open statement for the DataAccessObject as a property"
+	},
+
+	"dal.Where (full)": {
+		"prefix": "dwcomplete",
+		//    TextMemoNote ~C Note ~@C m.pcNote ~T Memo
+		"body": ".Where('${1:Field}',${2:lcTestValue},.f.,'${3:TableAlias}')",
+		"description": "Full .Where clause for dal/dao statement"
+	},
+
+	"dal.Where (simple)": {
+		"prefix": "dw",
+		//    TextMemoNote ~C Note ~@C m.pcNote ~T Memo
+		"body": ".Where('${1:Field}',${2:lcTestValue})",
+		"description": "Basic .Where clause for dal/dao statement"
+	},
+
+	"dal.WhereEmptyString": {
+		"prefix": "dwempty",
+		//    TextMemoNote ~C Note ~@C m.pcNote ~T Memo
+		"body": ".WhereEmptyString('${1:Field}','${2:TableAlias}')",
+		"description": "Basic .WhereEmptyString clause for dal/dao statement"
+	},
+
+	"dal.WhereTrue": {
+		"prefix": "dwtrue",
+		//    TextMemoNote ~C Note ~@C m.pcNote ~T Memo
+		"body": ".WhereTrue('${1:Field}','${2:TableAlias}')",
+		"description": "Basic .WhereTrue clause for dal/dao statement"
+	},
+
+	"dal.WhereFalse": {
+		"prefix": "dwfalse",
+		//    TextMemoNote ~C Note ~@C m.pcNote ~T Memo
+		"body": ".WhereTrue('${1:Field}','${2:TableAlias}')",
+		"description": "Basic .WhereTrue clause for dal/dao statement"
+	},
+
+	"dal.WhereInList_Iterable": {
+		"prefix": "dwiterable",
+		"body": [
+			"WITH .WhereInList_Iterable('${1:Field}','${2:Table}')",
+			"\tSELECT (${3:CursorAlias)",
+			"\tSCAN",
+			"\t\t.Iterate(${4:CursorField})",
+			"\tENDSCAN",
+			"\t.CompleteIterable()",
+			"ENDWITH",
+		],
+		"description": "WhereInList_Iterable for dal/dao statement"
+	},
+
+	"dal.Join": {
+		"prefix": "djoin",
+		"body": [
+			".Join('${1:File}')",
+			"\t.JoinOn('${2:Field})"
+		],
+		"description": "Basic join for dal/dao statement"
+	},
+
+	"dal.Fields": {
+		"prefix": "dfields",
+		//    TextMemoNote ~C Note ~@C m.pcNote ~T Memo
+		"body": ".Fields('${1:Field1,Field2,Field3}','${2:TableAlias}')",
+		"description": "Field list for dal/dao select statement"
+	},	
+
+	"dal.Set": {
+		"prefix": "dset",
+		//    TextMemoNote ~C Note ~@C m.pcNote ~T Memo
+		"body": ".Set('${1:Field}',${2:lcValue})",
+		"description": "Set statement for dal/dao insert/update statement"
+	},
+
+	"dal.SetObject": {
+		"prefix": "dsetobject",
+		//    TextMemoNote ~C Note ~@C m.pcNote ~T Memo
+		"body": ".SetObject(${1:loData},'${2:Include1,Include2,Include3}','${3:Exclude1,tcExclude2,Exclude3}')",
+		"description": "SetObject statement for dal/dao insert/update statement"
+	},
+
+	"dal.IntoObject": {
+		"prefix": "dinobject",
+		//    TextMemoNote ~C Note ~@C m.pcNote ~T Memo
+		"body": "${1:loData} = .IntoObject($2)",
+		"description": ".IntoObject to return the resultset as an object"
+	},	
+
+	"dal.IntoValue": {
+		"prefix": "dinvalue",
+		//    TextMemoNote ~C Note ~@C m.pcNote ~T Memo
+		"body": "${1:lcValue} = .IntoValue($2)",
+		"description": ".IntoValue return the resultset as a scalar value"
+	},	
+
+	"dal.IntoCursor": {
+		"prefix": "dincursor",
+		//    TextMemoNote ~C Note ~@C m.pcNote ~T Memo
+		"body": ".IntoValue('${1:TempCursor}')",
+		"description": ".IntoValue return the resultset as a scalar value"
+	},	
 }
