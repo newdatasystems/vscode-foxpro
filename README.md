@@ -22,4 +22,8 @@ Snippets are customized to use some internal development tools. Just ignore thos
 
 The "master" branch contains snippets that reference internal development tools that you most likely aren't interested in. If that's the case, please feel free to clone the "vanilla" branch which should be free of any company-specific references.
 
+### Credits
+
+Extension inspiration (and syntax highlighting file) from Matt Slay: https://github.com/mattslay/Visual-FoxPro-language-template-for-Visual-Studio-Code
+
 Fox Icon provided by: by Freepik (https://www.freepik.com/) under the Creative Commons license
