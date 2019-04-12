@@ -223,11 +223,11 @@
 							dderequest|ddes|ddesetoption|ddesets|ddesetservice|ddesett|ddesettopic|ddet|ddeterminate|deac|deactivate|debu|debug|debugo|debugout|decimals|decl|declare|defa|default|defaultext|defi|define|
 							dele|dele|delete|deleted|deleted|deletetables|delimited|delimiters|desc|desc|descending|descending|development|device|dif|diff|difference|dime|dimension|dir|dire|directory|directory|disk|
 							diskspace|disp|disp|display|displaypath|distinct|dll|dlls|dmy|dmy|do|dock|dode|dodefault|doev|doevents|dohistory|dos|dotip|double|dow|drag|driv|drivetype|drop|drop|dropoffline|dtoc|
-							dtor|dtos|dtot|each|echo|edit|edit|editsource|ejec|eject|else|empt|empty|encrypt|end|endde|enddefine|enddo|endfo|endfor|endp|endpri|endprintjob|
+							dtor|dtos|dtot|each|echo|edit|edit|editsource|ejec|eject|else|empt|empty|encrypt|end|endde|enddefine|enddo|endfo|endp|endpri|endprintjob|
 							endt|endtext|endtr|endtry|enginebehavior|environment|eof|eras|erase|erro|erro|error|error|escape|eval|evaluate|event|eventhandler|eventlist|eventtracking|evl|exact|
 							except|exclude|exclusive|exe|exec|execscript|exp|expo|export|exte|extended|external|fchs|fchsize|fclo|fclose|fcou|fcount|fcre|fcreate|fdat|fdate|fdow|feof|ferr|ferror|fflu|
 							fflush|fget|fgets|fiel|field|field|fields|file|file|files|filet|filetostr|fill|filt|filter|filter|fina|finally|fixed|fkla|fklabel|fkma|fkmax|flags|float|floc|flock|floo|floor|
-							flus|flush|font|font|fontmetric|footer|fope|fopen|for|forc|force|forceext|forcep|forcepath|foreign|form|format|foun|found|foxplus|fput|fputs|frea|fread|free|freeze|french|from|
+							flus|flush|font|font|fontmetric|footer|fope|fopen|forc|force|forceext|forcep|forcepath|foreign|form|format|foun|found|foxplus|fput|fputs|frea|fread|free|freeze|french|from|
 							fsee|fseek|fsiz|fsize|ftim|ftime|full|full|fullpath|fullpath|fv|fweek|fwri|fwrite|gath|gather|general|geta|getautoincvalue|getb|getbar|getc|getcolor|getcp|
 							getcu|getcursoradapter|getd|getdir|gete|gete|getenv|getexpr|getf|getfile|getfl|getfldstate|getfo|getfont|geth|gethost|geti|getinterface|getn|getnextmodified|geto|getobject|getp|getpa|
 							getpad|getpem|getpi|getpict|getpr|getprinter|getr|getresultset|getwordc|getwordcount|getwordn|getwordnum|go|gomo|gomonth|goto|group|grow|halfheight|having|head|header|heading|headings|
@@ -250,7 +250,7 @@
 							relation|relation|relative|rele|release|remo|remo|remote|remove|removeproperty|rena|rename|replicate|repo|report|reportbehavior|reprocess|requ|requery|
 							resource|resources|rest|restore|resu|resume|retr|retry|retu|return|rgb|rgbs|rgbscheme|righ|right|right|rightc|rloc|rlock|rmdi|rmdir|roll|rollback|rollover|roun|round|
 							rpd|rtljustify|rtod|rtri|rtrim|run|safety|same|save|save|savepicture|scan|scat|scatter|sche|scheme|scheme|scol|scols|screen|scroll|sdf|sec|seco|seconds|seconds|seek|
-							sele|sele|select|select|selection|separator|set|set|setf|setfldstate|setr|setresultset|share|sheet|shift|short|shortcut|show|shutdown|sign|sin|size|skip|skpb|skpbar|skpp|
+							sele|sele|selection|separator|set|set|setf|setfldstate|setr|setresultset|share|sheet|shift|short|shortcut|show|shutdown|sign|sin|size|skip|skpb|skpbar|skpp|
 							skppad|sort|soun|soundex|spac|space|space|sql|sqlbuffering|sqlca|sqlcancel|sqlcol|sqlcolumns|sqlcom|sqlcommit|sqlcon|sqlconnect|sqld|sqldisconnect|sqle|sqlexec|sqlg|sqlgetprop|
 							sqli|sqlidledisconnect|sqlm|sqlmoreresults|sqlp|sqlprepare|sqlr|sqlrollback|sqlse|sqlsetprop|sqlst|sqlstringconnect|sqlt|sqltables|sqrt|srow|srows|status|step|stor|store|str|
 							strc|strconv|stre|strextract|strictdate|strto|strtofile|strtr|strtran|structure|stuf|stuff|stuffc|style|subs|substr|substrc|sum|sum|summary|susp|suspend|sylk|sys|sysformats|
@@ -502,7 +502,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>!|\$|%|&amp;|\-|\-|\+|\+|~|==|==|=|!=|&lt;=|&gt;=|&lt;&gt;|&lt;|&gt;|!</string>
+			<string>!|\*|\$|%|&amp;|\-|\-|\+|\+|~|==|==|=|!=|&lt;=|&gt;=|&lt;&gt;|&lt;|&gt;|!</string>
 			<key>name</key>
 			<string>keyword.operator.foxpro</string>
 		</dict>
