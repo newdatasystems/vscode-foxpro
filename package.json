@@ -10,7 +10,7 @@
 	"homepage": "https://github.com/newdatasystems/vscode-foxpro",
 	"version": "1.4.0",
 	"author": "Tom Bellin",
-	"publisher": "New Data Systems, Inc.",
+	"publisher": "newdatasystems",
 	"engines": {
 		"vscode": "^1.8.0"
 	},
