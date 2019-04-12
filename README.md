@@ -3,20 +3,28 @@
 
 This extension adds generic syntax highlighting for foxpro (including function and class definition detection).
 
-Snippets are customized to use some internal development tools. Just ignore those.
+### Snippets
+- *lnsel*: local select (declares a variable, stores the current area and then restores it)
+- *docase*: CASE Statement (a case statement with two conditions and and otherwise)
+- *prc*: PROCEDURE Declaration
+- *dc*: DECLARE CLASS declaration (no external reference)
+- *dco*: DECLARE CLASS declaration (using external file reference)
+- *dcf*: DECLARE CLASS with direct instantiation (e.g. you can call `xxx = MyObjectFileName()` to get an instance of the object)
+- *ifel*: IF/ELSE/ENDIF statement
+- *ifend*: IF/ENDIF statement
+- *iifs*: Simple IIF statement
+- *ics*: Simple ICASE statement
+- *tryc*: TRY/CATCH block
+- *trycf*: TRY/CATCH/FINALLY block
 
-## Changelog
-1.4.0: Updated configuration for distribution as a vscode extension
-
-1.3.0: Added configuration to ensure PRGs use Windows 1252 encoding
-
-1.2.0: Syntax highlighting fix for asterisk (SELECT * FROM... no comments the rest of the line)
-
-1.1.1: Expanded snippet definitions
-
-1.1.0: Added snippets, cleaned up syntax file
-
-1.0.1: Initial branch from original version
+### Internal Snippets
+- *fs* (select), *fso* (select into object),*fin* (insert),*fup* (update),*fdel* (delete)
+- *multi* - TEXTAREA based multiprompt declaration
+- *mptext*,*mpname*,*mpnum*,*mpdate*,*mplist*,*mpcheck*,*mplabel*,*mprange*,*mpnote*
+- *open* (this.Open),*dopen* (this.Dao.Open)
+- *dw* (.Where), *dwcomplete* (.Where full)
+- *djoin* (.Join), *dfields* (.Fields), *dset* (.Set), *dsetobj* (.SetObject)
+- *dinval* (.IntoValue), *dinobj* (.IntoObject), *dincurs* (.IntoCursor)
 
 ### More
 
