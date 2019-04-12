@@ -37,6 +37,7 @@
 		"description": "Simple foxpro procedure call"
 	},
 
+    // [internal]
 	"fSelectStatement": {
 		"prefix": "fs",
 		"body": [
@@ -47,6 +48,7 @@
 		"description": "Simple fSelectStatment"
 	},
 
+    // [internal]
 	"fSelectStatement.IntoObject": {
 		"prefix": "fso",
 		"body": [
@@ -58,6 +60,7 @@
 		"description": "Simple fSelectStatment with an output IntoObject"
 	},
 
+    // [internal]
 	"fSelectStatement.IntoValue": {
 		"prefix": "fsv",
 		"body": [
@@ -70,6 +73,7 @@
 		"description": "Simple fSelectStatment with an output IntoObject"
 	},
 
+    // [internal]
 	"fUpdateStatement": {
 		"prefix": "fup",
 		"body": [
@@ -83,6 +87,7 @@
 		"description": "Simple fUpdateStatement"
 	},
 
+    // [internal]
 	"fInsertStatement": {
 		"prefix": "fin",
 		"body": [
@@ -95,6 +100,7 @@
 		"description": "Simple fUpdateStatement"
 	},
 
+    // [internal]
 	"fDeleteStatement": {
 		"prefix": "fdel",
 		"body": [
@@ -149,11 +155,13 @@
 		"description":"Define class with functional call to instantiate"
 	},
     
+    // multiprompt
+    // [internal]
     "Multiprompt Definition": {
         "prefix": "multi",
         "body": [
             "TEXT TO ${1:lcFields} ADDITIVE TEXTMERGE NOSHOW FLAGS 3 PRETEXT 3",
-            "\t{0}",
+            "\t$0",
             "ENDTEXT",
             "${2:loResult} = MultiPrompt($1,${3:'Dialog Caption'})",
             "",
@@ -162,7 +170,69 @@
             "ENDIF"
         ],
         "description":"Multiprompt definition"
-        }
-    }
+    },
 
+    "Multiprompt Text Field": {
+        "prefix": "mptext",
+        // TextProduct ~C Product ~E <<rcProduct>> ~W <<! SYSONEPROD>> ~V qck('qckprod',@{1})
+        "body": "${1:TextFieldName} ~C ${2:Caption} ~E <<${3:pcInitialValue}>> ~V ${4:ValidEvent(@{1})}",
+        "description": "Generic text field definition for multiprompt"
+    },
+
+    "Multiprompt Text Name": {
+        "prefix": "mpname",
+        "body": "${1:TextName} ~C ${2:Caption} ~EC <<${3:pcInitialValue}>>",
+        "description": "Text field allowing for lowercase letters for multiprompt"
+    },
+
+    "Multiprompt Number Field": {
+        "prefix": "mpnum",
+        "body": "${1:TextNumber} ~C ${2:Caption} ~EN <<${3:pnInitialValue}>> ~F R ~M ${4:999,999.99}",
+        "description": "Text field that accepts numbers for multiprompt"
+    },
+
+    "Multiprompt Date Field": {
+        "prefix": "mpdate",
+        "body": "${1:TextDate} ~C ${2:Caption} ~ED <<${3:pdInitialValue}>>",
+        "description": "Text field that accepts numbers for multiprompt"
+    },
+
+    "Multiprompt List Field": {
+        "prefix": "mplist",
+        "body": "${1:ListFieldName} ~C ${2:Caption} ~EC <<${3:pcInitialValue}>> ~T LIST ~L ${4:Element 1,Element 2}",
+        "description": "Generic list field definition for multiprompt"
+    },
+
+    "Multiprompt Check Field": {
+        "prefix": "mpcheck",
+        "body": "${1:CheckFieldName} ~C ${2:Caption} ~EL <<${3:pbInitialValue}>> ~T Check",
+        "description": "Generic checkbox field definition for multiprompt"
+    },
+    "Multiprompt Group Field": {
+        "prefix": "mpgroup",
+        // GroupContract ~T GROUP ~F LAYOUT ~SH MIDDLE 10
+        "body": "${1:GroupName} ~T Group ~F Layout ~S${2|V,H|} 10",
+        "description": "Generic group definition for multiprompt"
+    },
+
+    "Multiprompt Label Field": {
+        "prefix": "mplabel",
+        //LabelMustBeAccount ~T LABEL ~C <<qw(tcAccount)>> ~B FIXED,10,N ~G GroupAccount
+        "body": "${1:LabelName} ~T LABEL ~C ${2:Caption} ~EC <<${3:lcLabelContent}>> ~B FIXED,10,N",
+        "description": "Generic checkbox field definition for multiprompt"
+    },
+
+    "Multiprompt Range Field": {
+        "prefix": "mprange",
+        //PurchaseRange ~C From ~T Range ~E <<rcPurchaseRangeLow>>||<<rcPurchaseRangeHigh>> ~W {CheckPurchase} ~G PurchaseGroup
+        "body": "${1:RangeName} ~T RANGE ~C ${2:From} ~E <<${3:lcRangeLow}>>||<<${4:lcRangeHigh}>>",
+        "description": "Generic range entry field definition for multiprompt"
+    },
+
+    "Multiprompt Note Field": {
+    "prefix": "mpnote",
+    //    TextMemoNote ~C Note ~@C m.pcNote ~T Memo
+    "body": "${1:MemoName} ~T EDIT ~C ${2:Caption} ~@C <<${3:pcNote}>>",
+    "description": "Generic memo field definition for multiprompt"
+},
 }
