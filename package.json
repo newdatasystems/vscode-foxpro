@@ -8,7 +8,7 @@
 	},
 	"icon": "fox.png",
 	"homepage": "https://github.com/newdatasystems/vscode-foxpro",
-	"version": "1.5.0",
+	"version": "1.4.0",
 	"author": "Tom Bellin",
 	"publisher": "newdatasystems",
 	"engines": {
