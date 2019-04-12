@@ -6,6 +6,8 @@ This extension adds generic syntax highlighting for foxpro (including function a
 Snippets are customized to use some internal development tools. Just ignore those.
 
 ## Changelog
+1.4.0: Updated configuration for distribution as a vscode extension
+
 1.3.0: Added configuration to ensure PRGs use Windows 1252 encoding
 
 1.2.0: Syntax highlighting fix for asterisk (SELECT * FROM... no comments the rest of the line)
