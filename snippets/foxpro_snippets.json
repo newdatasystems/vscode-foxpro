@@ -147,6 +147,22 @@
 			"ENDDEFINE"
 		],
 		"description":"Define class with functional call to instantiate"
-	}
-	
+	},
+    
+    "Multiprompt Definition": {
+        "prefix": "multi",
+        "body": [
+            "TEXT TO ${1:lcFields} ADDITIVE TEXTMERGE NOSHOW FLAGS 3 PRETEXT 3",
+            "\t{0}",
+            "ENDTEXT",
+            "${2:loResult} = MultiPrompt($1,${3:'Dialog Caption'})",
+            "",
+            "IF VARTYPE(${2})#'O'",
+            "\tRETURN .f.",
+            "ENDIF"
+        ],
+        "description":"Multiprompt definition"
+        }
+    }
+
 }
