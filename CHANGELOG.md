@@ -1,4 +1,9 @@
 # Change Log
+## [1.4.4] - 2019-04-12
+### Changed
+- changed line comment character
+- fixed configuration reference
+
 ## [1.4.3] - 2019-04-12 
 ### Added
 - (syntax) removed duplicate SELECT|FOR|ENDFOR from the keyword section
