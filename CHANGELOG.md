@@ -1,4 +1,11 @@
 # Change Log
+## [1.4.5] - 2019-04-13
+### Changed
+- (syntax) removed duplicate reference for ENDDEFINE (Issue #4)
+- (readme) added "install" section (Issue #3)
+- (readme) added screenshot (Issue #2)
+- (readme) moved internal tool snippet listing to a separate collapsible section so it's not distracting (Issue #1)
+
 ## [1.4.4] - 2019-04-12
 ### Changed
 - changed line comment character
