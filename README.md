@@ -3,6 +3,8 @@
 
 This extension adds generic syntax highlighting for foxpro (including function and class definition detection).
 
+![alt text](http://content.screencast.com/users/MattSlay/folders/Snagit/media/354acc1a-ff2b-4514-84d0-3c47b2d7e250/04.01.2019-14.14.png "screenshot") 
+
 ### Snippets
 - *lnsel*: local select (declares a variable, stores the current area and then restores it)
 - *docase*: CASE Statement (a case statement with two conditions and and otherwise)
