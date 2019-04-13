@@ -1,6 +1,10 @@
 # Change Log
 ## [1.4.5] - 2019-04-13
 ### Changed
+- (syntax) actually removed duplicate reference for ENDDEFINE (Issue #4)
+
+## [1.4.5] - 2019-04-13
+### Changed
 - (syntax) removed duplicate reference for ENDDEFINE (Issue #4)
 - (readme) added "install" section (Issue #3)
 - (readme) added screenshot (Issue #2)
