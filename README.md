@@ -5,6 +5,10 @@ This extension adds generic syntax highlighting for foxpro (including function a
 
 ![alt text](http://content.screencast.com/users/MattSlay/folders/Snagit/media/354acc1a-ff2b-4514-84d0-3c47b2d7e250/04.01.2019-14.14.png "screenshot") 
 
+### How to Install
+
+The easiest way to install this extension is to use the VSCode extensions sidebar and search for "foxpro". Click on the green "Install" button. (If you'd prefer to install from a VSIX file follow these instructions: https://code.visualstudio.com/docs/editor/extension-gallery#_install-from-a-vsix)
+
 ### Snippets
 - *lnsel*: local select (declares a variable, stores the current area and then restores it)
 - *docase*: CASE Statement (a case statement with two conditions and and otherwise)
@@ -19,15 +23,6 @@ This extension adds generic syntax highlighting for foxpro (including function a
 - *tryc*: TRY/CATCH block
 - *trycf*: TRY/CATCH/FINALLY block
 
-### Internal Snippets
-- *fs* (select), *fso* (select into object),*fin* (insert),*fup* (update),*fdel* (delete)
-- *multi* - TEXTAREA based multiprompt declaration
-- *mptext*,*mpname*,*mpnum*,*mpdate*,*mplist*,*mpcheck*,*mplabel*,*mprange*,*mpnote*
-- *open* (this.Open),*dopen* (this.Dao.Open)
-- *dw* (.Where), *dwcomplete* (.Where full)
-- *djoin* (.Join), *dfields* (.Fields), *dset* (.Set), *dsetobj* (.SetObject)
-- *dinval* (.IntoValue), *dinobj* (.IntoObject), *dincurs* (.IntoCursor)
-
 ### More
 
 The "master" branch contains snippets that reference internal development tools that you most likely aren't interested in. If that's the case, please feel free to clone the "vanilla" branch which should be free of any company-specific references.
@@ -37,3 +32,16 @@ The "master" branch contains snippets that reference internal development tools 
 Extension inspiration (and syntax highlighting file) from Matt Slay: https://github.com/mattslay/Visual-FoxPro-language-template-for-Visual-Studio-Code
 
 Fox Icon provided by: by Freepik (https://www.freepik.com/) under the Creative Commons license
+
+<details>
+  <summary>Internal snippet list -- these reference my company's internal libraries so probably not very useful for anyone else</summary>
+  <ul>
+<li> *fs* (select), *fso* (select into object),*fin* (insert),*fup* (update),*fdel* (delete)
+<li> *multi* - TEXTAREA based multiprompt declaration
+<li> *mptext*,*mpname*,*mpnum*,*mpdate*,*mplist*,*mpcheck*,*mplabel*,*mprange*,*mpnote*
+<li> *open* (this.Open),*dopen* (this.Dao.Open)
+<li> *dw* (.Where), *dwcomplete* (.Where full)
+<li> *djoin* (.Join), *dfields* (.Fields), *dset* (.Set), *dsetobj* (.SetObject)
+<li> *dinval* (.IntoValue), *dinobj* (.IntoObject), *dincurs* (.IntoCursor)
+  </ul>
+</details>
