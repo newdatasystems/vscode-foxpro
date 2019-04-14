@@ -2,6 +2,7 @@
 ## [1.4.7] (unreleased)
 ### Added
 - (snippets) Object snippets (NEWOBJECT, ADDPROPERTY, CREATEOBJECT('EMPTY'))
+- (snippets) FOR LOOP
 
 ## [1.4.6] - 2019-04-13
 ### Changed

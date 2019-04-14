@@ -79,6 +79,30 @@
 		"description": "iif statement"
 	},
 
+	"FOR/ENDFOR statement": {
+		"prefix": "fore",
+		"body": [
+			"LOCAL ${1:lnStep}",
+			"FOR $1 = ${2:1} TO ${3:lnMaxSteps}",
+			"\t$0",
+			"ENDFOR"
+		],
+		"description": "simple for loop"
+	},
+
+	"ALINES() w/ FOR LOOP": {
+		"prefix": "foralines",
+		"body": [
+			"LOCAL lnStep,lnCount,laLines[1],lcLine",
+			"lnCount = ALINES(laLines,${1:lcString})",
+			"FOR m.lnStep = 1 TO m.lnCount",
+			"\tlcLine = laLines[m.lnStep]",
+			"\t$0",
+			"ENDFOR"
+		],
+		"description": "split a string into an array and loop through the array in a loop "
+	},
+
 	"icase statement": {
 		"prefix": "ics",
 		"body": [

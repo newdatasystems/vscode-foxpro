@@ -25,6 +25,8 @@ The easiest way to install this extension is to use the VSCode extensions sideba
 - *adp*: ADDPROPERTY call
 - *eo*: EMPTY object instantiation
 - *newo*: NEWOBJECT call
+- *fore*: FOR/ENDFOR loop
+- *foralines*: use ALINES to split a string and interate each line with FOR/ENDFOR
 
 ### More
 
