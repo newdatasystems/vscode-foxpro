@@ -1,4 +1,28 @@
 {
+	"NEWOBJECT": {
+		"prefix": "newo",
+		"body": [ 
+			"LOCAL ${1:loInstance}",
+			"$1 = NEWOBJECT('${2:ClassName}','${3:ClassFile}',''$0)"
+		],
+		"description": "add property macro"
+	},
+
+	"ADDPROPERTY": {
+		"prefix": "adp",
+		"body": "ADDPROPERTY(${1:loData},'${2:PropertyName}',${3:lcValue})",
+		"description": "add property macro"
+	},
+
+	"EMPTY object instantiation": {
+		"prefix": "eo",
+		"body": [
+			"LOCAL ${1:loData}",
+			"$1 = CREATEOBJECT('EMPTY')"
+		],
+		"description": "instantiate an empty object"
+	},
+
 	"try catch block": {
 		"prefix": "tryc",
 		"body": [

@@ -1,4 +1,8 @@
 # Change Log
+## [1.4.6] (unreleased)
+### Added
+- (snippets) Object snippets (NEWOBJECT, ADDPROPERTY, CREATEOBJECT('EMPTY'))
+
 ## [1.4.5] - 2019-04-13
 ### Changed
 - (syntax) removed duplicate reference for ENDDEFINE (Issue #4)
