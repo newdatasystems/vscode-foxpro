@@ -1,4 +1,28 @@
 {
+	"NEWOBJECT": {
+		"prefix": "newo",
+		"body": [ 
+			"LOCAL ${1:loInstance}",
+			"$1 = NEWOBJECT('${2:ClassName}','${3:ClassFile}',''$0)"
+		],
+		"description": "add property macro"
+	},
+
+	"ADDPROPERTY": {
+		"prefix": "adp",
+		"body": "ADDPROPERTY(${1:loData},'${2:PropertyName}',${3:lcValue})",
+		"description": "add property macro"
+	},
+
+	"EMPTY object instantiation": {
+		"prefix": "eo",
+		"body": [
+			"LOCAL ${1:loData}",
+			"$1 = CREATEOBJECT('EMPTY')"
+		],
+		"description": "instantiate an empty object"
+	},
+
 	"try catch block": {
 		"prefix": "tryc",
 		"body": [
@@ -53,6 +77,30 @@
 			"IIF(${1:condition},${2:if-true},${3:if-false})"
 		],
 		"description": "iif statement"
+	},
+
+	"FOR/ENDFOR statement": {
+		"prefix": "fore",
+		"body": [
+			"LOCAL ${1:lnStep}",
+			"FOR $1 = ${2:1} TO ${3:lnMaxSteps}",
+			"\t$0",
+			"ENDFOR"
+		],
+		"description": "simple for loop"
+	},
+
+	"ALINES() w/ FOR LOOP": {
+		"prefix": "foralines",
+		"body": [
+			"LOCAL lnStep,lnCount,laLines[1],lcLine",
+			"lnCount = ALINES(laLines,${1:lcString})",
+			"FOR m.lnStep = 1 TO m.lnCount",
+			"\tlcLine = laLines[m.lnStep]",
+			"\t$0",
+			"ENDFOR"
+		],
+		"description": "split a string into an array and loop through the array in a loop "
 	},
 
 	"icase statement": {

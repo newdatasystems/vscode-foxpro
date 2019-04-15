@@ -1,5 +1,10 @@
 # Change Log
-## [1.4.5] - 2019-04-13
+## [1.4.7] (unreleased)
+### Added
+- (snippets) Object snippets (NEWOBJECT, ADDPROPERTY, CREATEOBJECT('EMPTY'))
+- (snippets) FOR LOOP
+
+## [1.4.6] - 2019-04-13
 ### Changed
 - (syntax) actually removed duplicate reference for ENDDEFINE (Issue #4)
 

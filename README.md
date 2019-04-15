@@ -22,6 +22,11 @@ The easiest way to install this extension is to use the VSCode extensions sideba
 - *ics*: Simple ICASE statement
 - *tryc*: TRY/CATCH block
 - *trycf*: TRY/CATCH/FINALLY block
+- *adp*: ADDPROPERTY call
+- *eo*: EMPTY object instantiation
+- *newo*: NEWOBJECT call
+- *fore*: FOR/ENDFOR loop
+- *foralines*: use ALINES to split a string and interate each line with FOR/ENDFOR
 
 ### More
 
