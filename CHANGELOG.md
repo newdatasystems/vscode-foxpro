@@ -1,5 +1,5 @@
 # Change Log
-## [1.4.7] (unreleased)
+## [1.4.7] - 2019-04-15
 ### Added
 - (snippets) Object snippets (NEWOBJECT, ADDPROPERTY, CREATEOBJECT('EMPTY'))
 - (snippets) FOR LOOP
