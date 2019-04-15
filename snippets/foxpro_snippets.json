@@ -92,9 +92,8 @@
 	"Procedure": {
 		"prefix": "prc",
 		"body": [
-            "* ** ${1:ProcedureName} **",
             "* ${3:Procedure description}",
-			"PROCEDURE ${1} ($2)",
+			"PROCEDURE ${1:ProcedureName} ($2)",
 			"\t$0",
 			"ENDPROC"
 		],
