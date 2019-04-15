@@ -1,4 +1,8 @@
 # Change Log
+## [1.4.8] - 2019-04-15
+### Changed
+- (snippets) Fixes for internal snippets
+
 ## [1.4.7] - 2019-04-15
 ### Added
 - (snippets) Object snippets (NEWOBJECT, ADDPROPERTY, CREATEOBJECT('EMPTY'))

@@ -350,7 +350,7 @@
 	// dao helpers
 	// [internal]
     "DataAccessObject.Open": {
-		"prefix": "open",
+		"prefix": "dopen",
 		"body": [
 			"WITH this.Open('${1:File}')",
 			"\t$0",
@@ -360,7 +360,7 @@
 	},
 
     "this.Dao.Open": {
-		"prefix": "dopen",
+		"prefix": "popen",
 		"body": [
 			"WITH this.${1:Dao}.Open('${2:File}')",
 			"\t$0",
@@ -422,7 +422,7 @@
 		"prefix": "djoin",
 		"body": [
 			".Join('${1:File}')",
-			"\t.JoinOn('${2:Field})"
+			"\t.JoinOn('${2:Field}')"
 		],
 		"description": "Basic join for dal/dao statement"
 	},
@@ -465,7 +465,7 @@
 	"dal.IntoCursor": {
 		"prefix": "dincursor",
 		//    TextMemoNote ~C Note ~@C m.pcNote ~T Memo
-		"body": ".IntoValue('${1:TempCursor}')",
-		"description": ".IntoValue return the resultset as a scalar value"
+		"body": ".IntoCursor('${1:TempCursor}')",
+		"description": ".IntoValue return the resultset as a foxpro cursor"
 	},	
 }
