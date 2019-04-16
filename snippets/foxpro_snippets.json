@@ -160,6 +160,23 @@
 	},
 
     // [internal]
+	"fChooserDao": {
+		"prefix": "fchooser",
+		"body": [
+            "LOCAL loChooser,loResult",
+            "loChooser = fChooserDao()",
+			"WITH loChooser.OpenChooser('${1:File}')",
+			"\t.Where('${2:FieldName}',${3:lcValue})$0",
+            "ENDWITH",
+            "loResult = loChooser.Show('${4:Chooser Dialog Caption})",
+            "IF VARTYPE(loResult)#'O'",
+            "\tRETURN .f.",
+            "ENDIF"
+		],
+		"description": "Template code for preparing a query and display a chooser dialog"
+	},
+
+    // [internal]
 	"fSelectStatement.IntoObject": {
 		"prefix": "fso",
 		"body": [

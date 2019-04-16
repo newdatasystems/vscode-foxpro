@@ -1,4 +1,8 @@
 # Change Log
+## [1.4.9] - (unrelease)
+### Added
+- (snippets) fChooserDao (internal)
+
 ## [1.4.8] - 2019-04-15
 ### Changed
 - (snippets) Fixes for internal snippets
