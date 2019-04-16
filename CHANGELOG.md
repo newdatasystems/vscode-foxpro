@@ -2,6 +2,10 @@
 ## [1.4.9] - (unrelease)
 ### Added
 - (snippets) fChooserDao (internal)
+- (snippets) StoredProcedure class definition (internal)
+
+### Changed
+- (snippets) tagged internal snippets with the label "(internal)"
 
 ## [1.4.8] - 2019-04-15
 ### Changed
