@@ -28,10 +28,6 @@ The easiest way to install this extension is to use the VSCode extensions sideba
 - *fore*: FOR/ENDFOR loop
 - *foralines*: use ALINES to split a string and interate each line with FOR/ENDFOR
 
-### More
-
-The "master" branch contains snippets that reference internal development tools that you most likely aren't interested in. If that's the case, please feel free to clone the "vanilla" branch which should be free of any company-specific references.
-
 ### Credits
 
 Extension inspiration (and syntax highlighting file) from Matt Slay: https://github.com/mattslay/Visual-FoxPro-language-template-for-Visual-Studio-Code

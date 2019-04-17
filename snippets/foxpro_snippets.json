@@ -14,6 +14,12 @@
 		"description": "add property macro"
 	},
 
+	"BINDEVENT": {
+		"prefix": "bind",
+		"body": "BINDEVENT(${1:loEventSource},'${2:EventName}',${3:loHandler},''{4:HandleMethod}')",
+		"description": "bindevent macro"
+	},
+
 	"EMPTY object instantiation": {
 		"prefix": "eo",
 		"body": [

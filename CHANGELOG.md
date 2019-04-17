@@ -1,6 +1,7 @@
 # Change Log
-## [1.4.9] - (unrelease)
+## [1.4.9] - (unreleased)
 ### Added
+- (snippets) BINDEVENT
 - (snippets) fChooserDao (internal)
 - (snippets) StoredProcedure class definition (internal)
 
