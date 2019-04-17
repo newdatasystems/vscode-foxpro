@@ -250,7 +250,7 @@
 		"prefix": "dc",
 		"body": [
 			"DEFINE CLASS ${1:ClassName} AS ${2:ParentClass}",
-			"$2",
+			"\t$3",
 			"\tPROCEDURE ${4:Init} ()",
 			"\t\t$0",
 			"\tENDPROC",

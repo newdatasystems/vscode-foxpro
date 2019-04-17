@@ -6,6 +6,7 @@
 - (snippets) StoredProcedure class definition (internal)
 
 ### Changed
+- (snippets) fixed buggy snippet for DEFINE CLASS 
 - (snippets) tagged internal snippets with the label "(internal)"
 
 ## [1.4.8] - 2019-04-15
