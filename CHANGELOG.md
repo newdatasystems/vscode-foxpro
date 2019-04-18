@@ -1,5 +1,5 @@
 # Change Log
-## [1.4.9] - (2019-04-18)
+## [1.4.8] - (2019-04-18)
 ### Added
 - (snippets) BINDEVENT
 - (snippets) fChooserDao (internal)
@@ -8,9 +8,6 @@
 ### Changed
 - (snippets) fixed buggy snippet for DEFINE CLASS 
 - (snippets) tagged internal snippets with the label "(internal)"
-
-## [1.4.8] - 2019-04-15
-### Changed
 - (snippets) Fixes for internal snippets
 
 ## [1.4.7] - 2019-04-15
