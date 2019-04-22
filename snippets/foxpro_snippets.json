@@ -15,8 +15,8 @@
 	},
 
 	"BINDEVENT": {
-		"prefix": "bind",
-		"body": "BINDEVENT(${1:loEventSource},'${2:EventName}',${3:loHandler},''{4:HandleMethod}')",
+		"prefix": "bnd",
+		"body": "BINDEVENT(${1:loEventSource},'${2:EventName}',${3:loHandler},'${4:HandleMethod}')",
 		"description": "bindevent macro"
 	},
 
@@ -174,7 +174,7 @@
 			"WITH loChooser.OpenChooser('${1:File}')",
 			"\t.Where('${2:FieldName}',${3:lcValue})$0",
             "ENDWITH",
-            "loResult = loChooser.Show('${4:Chooser Dialog Caption})",
+            "loResult = loChooser.Show('${4:Chooser Dialog Caption}')",
             "IF VARTYPE(loResult)#'O'",
             "\tRETURN .f.",
             "ENDIF"

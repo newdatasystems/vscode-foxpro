@@ -27,6 +27,7 @@ The easiest way to install this extension is to use the VSCode extensions sideba
 - *newo*: NEWOBJECT call
 - *fore*: FOR/ENDFOR loop
 - *foralines*: use ALINES to split a string and interate each line with FOR/ENDFOR
+- *bind*: BINDEVENT call
 
 ### Credits
 

@@ -1,4 +1,9 @@
 # Change Log
+## [1.4.9] - unreleased
+### Changed
+- (snippets) fixed BINDEVENT snippet
+- (snippets) fixed fChooserDao snippet
+
 ## [1.4.8] - (2019-04-18)
 ### Added
 - (snippets) BINDEVENT
