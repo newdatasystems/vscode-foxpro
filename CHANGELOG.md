@@ -1,6 +1,7 @@
 # Change Log
 ## [1.4.9] - unreleased
 ### Changed
+- (snippets) improved Multiprompt snippet
 - (snippets) fixed BINDEVENT snippet
 - (snippets) fixed fChooserDao snippet
 
