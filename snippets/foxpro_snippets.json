@@ -208,6 +208,18 @@
 	},
 
     // [internal]
+	"fStoredProcedure": {
+		"prefix": "fsp",
+		"body": [
+			"WITH fStoredProcedure('${1:sp_Name}')",
+			"\t.Params(${2:Params})",
+			"\t.Execute()",
+			"ENDWITH"
+		],
+		"description": "Simple fStoredProcedure"
+	},
+
+    // [internal]
 	"fUpdateStatement": {
 		"prefix": "fup",
 		"body": [
@@ -289,6 +301,7 @@
 		"description":"Define class with functional call to instantiate"
 	},
  
+    // [internal]
 	"Define StoredProcedure Class (internal)": {
 		"prefix": "dcsp",
 		"body": [
