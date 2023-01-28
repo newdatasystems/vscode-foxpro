@@ -224,7 +224,7 @@
 							dele|dele|delete|deleted|deleted|deletetables|delimited|delimiters|desc|desc|descending|descending|development|device|dif|diff|difference|dime|dimension|dir|dire|directory|directory|disk|
 							diskspace|disp|disp|display|displaypath|distinct|dll|dlls|dmy|dmy|do|dock|dode|dodefault|doev|doevents|dohistory|dos|dotip|double|dow|drag|driv|drivetype|drop|drop|dropoffline|dtoc|
 							dtor|dtos|dtot|each|echo|edit|edit|editsource|ejec|eject|else|empt|empty|encrypt|end|endde|enddo|endfo|endp|endpri|endprintjob|
-							endt|endtext|endtr|endtry|enginebehavior|environment|eof|eras|erase|erro|erro|error|error|escape|eval|evaluate|event|eventhandler|eventlist|eventtracking|evl|exact|
+							endt|endtr|endtry|enginebehavior|environment|eof|eras|erase|erro|erro|error|error|escape|eval|evaluate|event|eventhandler|eventlist|eventtracking|evl|exact|
 							except|exclude|exclusive|exe|exec|execscript|exp|expo|export|exte|extended|external|fchs|fchsize|fclo|fclose|fcou|fcount|fcre|fcreate|fdat|fdate|fdow|feof|ferr|ferror|fflu|
 							fflush|fget|fgets|fiel|field|field|fields|file|file|files|filet|filetostr|fill|filt|filter|filter|fina|finally|fixed|fkla|fklabel|fkma|fkmax|flags|float|floc|flock|floo|floor|
 							flus|flush|font|font|fontmetric|footer|fope|fopen|forc|force|forceext|forcep|forcepath|foreign|form|format|foun|found|foxplus|fput|fputs|frea|fread|free|freeze|french|from|
@@ -254,7 +254,7 @@
 							skppad|sort|soun|soundex|spac|space|space|sql|sqlbuffering|sqlca|sqlcancel|sqlcol|sqlcolumns|sqlcom|sqlcommit|sqlcon|sqlconnect|sqld|sqldisconnect|sqle|sqlexec|sqlg|sqlgetprop|
 							sqli|sqlidledisconnect|sqlm|sqlmoreresults|sqlp|sqlprepare|sqlr|sqlrollback|sqlse|sqlsetprop|sqlst|sqlstringconnect|sqlt|sqltables|sqrt|srow|srows|status|step|stor|store|str|
 							strc|strconv|stre|strextract|strictdate|strto|strtofile|strtr|strtran|structure|stuf|stuff|stuffc|style|subs|substr|substrc|sum|sum|summary|susp|suspend|sylk|sys|sysformats|
-							sysm|sysmenu|sysmetric|system|tab|table|tabler|tablerevert|tables|tableu|tableupdate|tablevalidate|tag|tag|tagc|tagcount|tagn|tagno|taiwan|talk|tan|targ|target|text|textmerge|
+							sysm|sysmenu|sysmetric|system|tab|table|tabler|tablerevert|tables|tableu|tableupdate|tablevalidate|tag|tag|tagc|tagcount|tagn|tagno|taiwan|talk|tan|targ|target|textmerge|
 							textmerge|this|thisform|thro|throw|time|time|timeout|title|top|topic|tota|total|tran|transaction|transform|trbetween|trigger|trim|try|ttoc|ttod|txnl|txnlevel|txtw|txtwidth|type|type|
 							typeahead|udfparms|unbi|unbindevents|union|unique|unlo|unlock|upda|update|uppe|upper|usa|use|used|userid|usetip|val|vali|valid|validate|value|values|varcharmapping|vart|vartype|
 							vartype|vers|version|view|views|wait|wbor|wborder|wchi|wchild|wcol|wcols|wdoc|wdockable|week|wexi|wexist|wfon|wfont|when|where|while|window|windows|wks|wlas|wlast|wlco|
@@ -342,6 +342,41 @@
 					<key>name</key>
 					<string>constant.character.escape.apostrophe.foxpro</string>
 				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<!-- Grab up until end of line, and highlight TEXT
+			     differently than the modifiers that come after. -->
+			<string>(?i:\b(TEXT)\b(.*\n)?)</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.text.foxpro</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.control.foxpro</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>ENDTEXT</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.endtext.foxpro</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>string.quoted.double.foxpro</string>
+			<key>patterns</key>
+			<array>
+				
 			</array>
 		</dict>
 		<dict>
