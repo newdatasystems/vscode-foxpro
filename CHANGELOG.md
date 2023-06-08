@@ -1,4 +1,10 @@
 # Change Log
+## [1.4.11] - (2023-06-08)
+- (syntax) added auto-indent definition (#8)
+- (syntax) added INTEGER as a keyword (#6)
+## [1.4.10] - (2020-09-24)
+- (snippets) added fStoredProcedure
+
 ## [1.4.9] - unreleased
 ### Changed
 - (snippets) improved Multiprompt snippet
