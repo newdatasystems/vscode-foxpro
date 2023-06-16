@@ -1,4 +1,6 @@
 # Change Log
+## [1.4.12] - (2023-06-16)
+- (syntax) relaxed auto-index and added un-indent rules (#8)
 ## [1.4.11] - (2023-06-08)
 - (syntax) added auto-indent definition (#8)
 - (syntax) added INTEGER as a keyword (#6)
