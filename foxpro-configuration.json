@@ -14,7 +14,7 @@
         ["'", "'"]
     ],
 	"indentationRules": {
-		"increaseIndentPattern": "^\\s*(DEFINE|FUNCTION|PROCEDURE|PROC|FUNC|FOR|IF|ELSE|TEXT|SCAN|TRY|CATCH|FINALLY|DO CASE|CASE|OTHERWISE|OTHER|DO WHILE)",
-		"decreaseIndentPattern": "^\\s"
+		"increaseIndentPattern": "^\\s*(DEFI|DEFINE|FUNCTION|PROCEDURE|PROC|FUNC|FOR|IF|TEXT|SCAN|TRY|CATCH|FINALLY|DO CASE|DO WHILE)",
+		"decreaseIndentPattern": "^\\s*(ENDI|ENDD|ENDP|ENDF|ENDS|ENDT|ENDC)"
 	}
 }
